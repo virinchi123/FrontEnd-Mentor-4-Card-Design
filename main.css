@@ -12,6 +12,8 @@ body {
           box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  color: #4c4e61;
+  width: auto;
 }
 
 body #header1 {
@@ -41,7 +43,7 @@ body #header3 {
       grid-template-columns: 1fr 1 fr 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "card2 card1 card4" "card2 card3 card4";
+      grid-template-areas: "card1 card2 card4" "card1 card3 card4";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -58,7 +60,7 @@ body #header3 {
   border-top: 3px solid;
   padding: 4px;
   font-weight: normal;
-  color: #cccccc;
+  color: #a3a5ae;
   font-size: x-small;
   margin: 5px;
   -webkit-box-shadow: 10px 5px 5px #eee;
@@ -93,23 +95,23 @@ body #header3 {
 
 .card .title {
   font-weight: 600;
-  color: black;
+  color: #4c4e61;
   font-size: large;
   margin: 0px;
 }
 
 #card1 {
-  border-top: 3px solid #ea5353;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: card1;
-}
-
-#card2 {
   border-color: #45d3d3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
+  grid-area: card1;
+}
+
+#card2 {
+  border-top: 3px solid #ea5353;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: card2;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -132,5 +134,30 @@ body #header3 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (max-width: 375px) {
+  #container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "card1" "card2" "card3" "card4";
+    height: auto;
+    width: auto;
+    -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .card {
+    margin: 5px auto 5px auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body #header3 {
+    width: 70vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */
