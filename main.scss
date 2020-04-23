@@ -1,0 +1,81 @@
+#encompass{
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+body{
+    background-color: rgb(250,250,250);
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+    #header1{
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+
+    #header2{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    #header3{
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: lighten(rgb(0,0,0),80%)
+    }
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "card2 card1 card4"
+    "card2 card3 card4";
+    height: 70vh;
+    width: 100vw;
+    align-self: center;
+    box-sizing: border-box;
+}
+.card{
+    background-color: white;
+    border-radius: 3px;
+    border-top: 3px solid;
+    padding: 20px;
+    font-weight: normal;
+    color: lighten(rgb(0,0,0),80%);
+    font-size: x-small;
+    margin: 5px;
+    box-shadow: 10px 5px 5px #eee;
+    box-sizing: border-box;
+    height: 200px;
+    width: 300px;
+
+    .title{
+        font-weight: 600;
+        color: black;
+        font-size: large;;
+    }
+}
+#card1{
+        border-top: 3px solid hsl(0, 78%, 62%);
+        grid-area: card1;
+}
+
+#card2{
+        border-color: hsl(180, 62%, 55%);
+        grid-area: card2;
+        align-self: center;
+}
+
+#card3{
+        border-color: hsl(34, 97%, 64%);
+        grid-area: card3;
+}
+
+#card4{
+        border-color: hsl(212, 86%, 64%);
+        grid-area: card4;
+        align-self: center;
+}
